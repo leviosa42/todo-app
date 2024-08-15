@@ -6,7 +6,6 @@ main {
 form.new-todo {
     margin: 0;
     padding: 0;
-    height: 40px;
 
     input[type="text"] {
         border: 1px solid rgba(0, 0, 0, 0.3);
