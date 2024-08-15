@@ -1,0 +1,9 @@
+header {
+    font-size: 1.5rem;
+    /* font-weight: bold; */
+    font-style: italic;
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: left;
+}
