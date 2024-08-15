@@ -1,7 +1,7 @@
 import { TodoItemModel } from "./model/TodoItemModel.js";
 import { TodoListModel } from "./model/TodoListModel.js";
 import { TodoListView } from "./view/TodoListView.js";
-import { PERIOD_TO_DEADLINE_MS } from "./Constants.js";
+import { PERIOD_TO_DEADLINE_MS } from "./constants.js";
 
 export class App {
     #todoListModel;
