@@ -172,7 +172,6 @@ div.todo-list-container {
             padding: 0.2rem;
             width: 100%;
             height: 100%;
-            aspect-ratio: 1 / 1;
 
             display: flex;
             justify-content: center;
