@@ -57,18 +57,34 @@ div.todo-list-container {
 
     .checkbox {
         grid-area: checkbox;
-        background-color: lightblue;
+        background-color: transparent;
         margin: 0;
         padding: 0rem;
 
         input[type="checkbox"] {
-            accent-color: #4caf50;
+            appearance: none;
+            font-family: "FontAwesome";
+            font-size: 1.8rem;
 
             margin: 0;
             padding: 0;
             width: 100%;
             height: 100%;
             aspect-ratio: 1 / 1;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &::before {
+                content: "\f14a";
+                color: #888;
+            }
+
+            &:checked::before {
+                content: "\f14a";
+                color: #4caf50;
+            }
         }
     }
 
