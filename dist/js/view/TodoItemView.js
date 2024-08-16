@@ -76,7 +76,7 @@ export class TodoItemView {
         deleteDivE.className = "delete";
         /** @type {HTMLButtonElement} */
         const deleteButtonE = document.createElement("button");
-        deleteButtonE.textContent = "x";
+        // deleteButtonE.textContent = "x";
         deleteButtonE.addEventListener("click", () => {
             onDelete({
                 id: todo.id,
