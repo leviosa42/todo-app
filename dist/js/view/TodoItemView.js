@@ -38,19 +38,19 @@ export class TodoItemView {
         titleDivE.className = "title";
         /** @type {HTMLFormElement} */
         const titleFormE = document.createElement("form");
+        /** @type {HTMLInputElement} */
+        const titleInputE = document.createElement("input");
+        titleInputE.type = "text";
+        titleInputE.value = todo.title;
         titleFormE.addEventListener("submit", (event) => {
             event.preventDefault();
-            const title = titleInput.value;
+            const title = titleInputE.value;
             onUpdate({
                 id: todo.id,
                 title,
                 completedAt: todo.completedAt,
             });
         });
-        /** @type {HTMLInputElement} */
-        const titleInputE = document.createElement("input");
-        titleInputE.type = "text";
-        titleInputE.value = todo.title;
         titleFormE.appendChild(titleInputE);
         titleDivE.appendChild(titleFormE);
         liE.appendChild(titleDivE);
