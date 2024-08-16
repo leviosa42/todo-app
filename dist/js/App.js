@@ -25,7 +25,6 @@ export class App {
             const targetE = document.querySelector(
                 `#${CSS.escape(todo.id)} > .timer > label`,
             );
-            console.log(targetE);
             // タイムゾーンを考慮して、msec を HH:MM:SS形式に整形する
             const formatted = ((ms) => {
                 const absMS = Math.abs(ms);
