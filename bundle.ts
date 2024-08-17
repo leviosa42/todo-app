@@ -7,4 +7,4 @@ const result = await bundle(
 
 const { code } = result;
 
-Deno.writeTextFileSync("./dist/index.js", code);
+Deno.writeTextFileSync("./dist/bundle.js", code);
