@@ -40,13 +40,15 @@ export class TodoItemView {
             const divE: HTMLDivElement = document.createElement("div");
             divE.className = "title";
             const formE: HTMLFormElement = document.createElement("form");
-            formE.type = "text";
-            formE.value = todo.title;
+            const inputE: HTMLInputElement = document.createElement("input");
+            inputE.type = "text";
+            inputE.value = todo.title;
+            formE.appendChild(inputE);
             formE.addEventListener("submit", (event) => {
                 event.preventDefault();
                 onUpdate({
                     ...todo.getOptions(),
-                    title: formE.value,
+                    title: inputE.value,
                 });
             });
             divE.appendChild(formE);
