@@ -1,11 +1,20 @@
 {
-    "compilerOptions": {
-        "lib": [
-            "dom",
-            "deno.ns"
-        ]
-    },
-    "tasks": {
-        "bundle": "deno run -A bundle.ts"
-    }
+  "compilerOptions": {
+    "lib": [
+      "dom",
+      "deno.ns"
+    ]
+  },
+  "fmt": {
+    "useTabs": false, // default false
+    "lineWidth": 80, // default 80
+    "indentWidth": 2, // default 2
+    "semiColons": true,
+    "singleQuote": false, // default false
+    "proseWrap": "always" // default "always"
+  },
+  "tasks": {
+    "serve": "deno run -A server.ts",
+    "bundle": "deno run -A bundle.ts"
+  }
 }

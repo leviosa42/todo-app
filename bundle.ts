@@ -2,7 +2,7 @@
 import { bundle } from "jsr:@deno/emit";
 
 const result = await bundle(
-    new URL("./src/index.ts", import.meta.url),
+  new URL("./src/index.ts", import.meta.url),
 );
 
 const { code } = result;

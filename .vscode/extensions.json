@@ -1,7 +1,7 @@
 {
-    "recommendations": [
-        "denoland.vscode-deno",
-        "ms-edgedevtools.vscode-edge-devtools",
-        "ms-vscode.live-server"
-    ]
+  "recommendations": [
+    "denoland.vscode-deno",
+    "ms-edgedevtools.vscode-edge-devtools",
+    "ms-vscode.live-server"
+  ]
 }
