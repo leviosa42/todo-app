@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 {
   "recommendations": [
     "denoland.vscode-deno",
@@ -5,3 +6,18 @@
     "ms-vscode.live-server"
   ]
 }
+||||||| Stash base
+{
+    "recommendations": [
+        "denoland.vscode-deno",
+        "ms-edgedevtools.vscode-edge-devtools",
+        "ms-vscode.live-server"
+    ]
+}
+=======
+{
+  "recommendations": [
+    "denoland.vscode-deno"
+  ]
+}
+>>>>>>> Stashed changes

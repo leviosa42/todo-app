@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 {
   "deno.config": "deno.jsonc",
   "deno.enable": true,
@@ -10,3 +11,35 @@
     "editor.defaultFormatter": "denoland.vscode-deno"
   }
 }
+||||||| Stash base
+{
+    "deno.config": "deno.jsonc",
+    "deno.enable": true,
+    "deno.lint": true,
+    "editor.formatOnSave": true,
+    "[javascript]": {
+        "editor.defaultFormatter": "denoland.vscode-deno"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "denoland.vscode-deno"
+    },
+}
+=======
+{
+  "deno.config": "deno.jsonc",
+  "deno.enable": true,
+  "deno.lint": true,
+  "editor.formatOnSave": true,
+  "json.format.enable": true,
+  "editor.detectIndentation": true,
+  "[jsonc]": {
+    "editor.defaultFormatter": "denoland.vscode-deno"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "denoland.vscode-deno"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "denoland.vscode-deno"
+  }
+}
+>>>>>>> Stashed changes
