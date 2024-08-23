@@ -1,9 +1,39 @@
 // @deno-types="@types/react"
-import { useState } from "react";
-import type { Todo } from "../types/Todo.d.ts";
+import { useEffect, useState } from "react";
+import { isTodo, Todo } from "../types/Todo.ts";
 import "../styles/TodoList.css";
 export default () => {
-  const [todos, setTodos] = useState<Todo[]>([]);
+  const loadedTodos = localStorage.getItem("todos");
+  const initialTodos = loadedTodos === null
+    ? []
+    : JSON.parse(loadedTodos, (k: string, v: unknown) => {
+      if (
+        k === "createdAt" || k === "updatedAt" || k === "completedAt" || k === "deadlineAt" ||
+        k === "removedAt"
+      ) {
+        return v === null ? null : new Date(v as string);
+      }
+      return v;
+    });
+  if (!Array.isArray(initialTodos) || !initialTodos.every((todo) => isTodo(todo))) {
+    // localStorage.removeItem("todos");
+    console.error("Invalid todos data", initialTodos);
+  }
+  const [todos, setTodos] = useState<Todo[]>(initialTodos);
+
+  useEffect(() => {
+    localStorage.setItem(
+      "todos",
+      JSON.stringify(todos, (k, v) => {
+        if (v instanceof Date) {
+          return v.toISOString();
+        }
+        return v;
+      }),
+    );
+    console.log("todos", todos);
+  }, [todos]);
+
   const [nowTime, setNowTime] = useState<Date>(new Date());
 
   setInterval(() => {
