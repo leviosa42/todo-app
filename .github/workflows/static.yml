@@ -36,7 +36,7 @@ jobs:
         with:
           deno-version: v1.x
       - name: Bundle scripts
-        run: deno task bundle
+        run: deno task build
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

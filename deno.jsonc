@@ -1,20 +1,55 @@
 {
   "compilerOptions": {
+    "jsx": "react-jsx",
     "lib": [
+      "deno.ns",
       "dom",
-      "deno.ns"
+      "dom.iterable"
     ]
   },
   "fmt": {
-    "useTabs": false, // default false
-    "lineWidth": 80, // default 80
-    "indentWidth": 2, // default 2
+    "include": [
+      ".vscode/*.json",
+      "deno.jsonc",
+      "src/**/*.ts",
+      "src/**/*.tsx"
+    ],
+    "exclude": [
+      "deprecated/",
+      "node_modules/",
+      "dist/"
+    ],
+    "indentWidth": 2,
+    "lineWidth": 100,
     "semiColons": true,
-    "singleQuote": false, // default false
-    "proseWrap": "always" // default "always"
+    "singleQuote": false,
+    "useTabs": false
+  },
+  "lint": {
+    "include": [
+      "deno.jsonc",
+      "src/**/*.ts",
+      "src/**/*.tsx"
+    ],
+    "exclude": [
+      "deprecated/",
+      "node_modules/",
+      "dist/"
+    ]
   },
   "tasks": {
-    "serve": "deno run -A server.ts",
-    "bundle": "deno run -A bundle.ts"
+    "dev": "deno run -A npm:vite",
+    "build": "deno run -A npm:vite build",
+    "preview": "deno run -A npm:vite preview",
+    "serve": "deno run --allow-net --allow-read https://deno.land/std@0.157.0/http/file_server.ts dist/"
+  },
+  "nodeModulesDir": true,
+  "imports": {
+    "@types/react": "npm:@types/react@^18.3.4",
+    "@types/react-dom": "npm:@types/react-dom@^18.3.0",
+    "@vitejs/plugin-react": "npm:@vitejs/plugin-react@^4.3.1",
+    "react": "npm:react@^18.3.1",
+    "react-dom": "npm:react-dom@^18.3.1",
+    "vite": "npm:vite@^5.4.2"
   }
 }
