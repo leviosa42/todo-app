@@ -114,6 +114,7 @@ export default () => {
                 <div className="timer">
                   <label>
                     {todo.deadlineAt === null ? "" : ((ms: number): string => {
+                      if (ms < 0) return "期限切れ";
                       const absMS = Math.abs(ms);
                       const hh = Math.floor(absMS / (1000 * 60 * 60)).toString()
                         .padStart(2, "0");
@@ -141,6 +142,7 @@ export default () => {
                     className="bar"
                     style={{
                       width: todo.deadlineAt === null ? "0%" : ((ms: number): string => {
+                        if (ms < 0) return "0%";
                         const absMS = Math.abs(ms);
                         const percent = Math.min(100, (absMS / (1000 * 60 * 3)) * 100);
                         return `${percent}%`;
