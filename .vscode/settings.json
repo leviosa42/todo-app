@@ -1,10 +1,10 @@
 {
-  "deno.config": "deno.jsonc",
   "deno.enable": true,
   "deno.lint": true,
   "editor.formatOnSave": true,
   "json.format.enable": true,
-  "editor.detectIndentation": true,
+  "editor.indentSize": "tabSize",
+  "editor.tabSize": 2,
   "[jsonc]": {
     "editor.defaultFormatter": "denoland.vscode-deno"
   },
