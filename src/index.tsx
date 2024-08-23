@@ -8,6 +8,15 @@ const root = createRoot(document.getElementById("root")!);
 
 root.render(
   <React.StrictMode>
-    <App />
+    <div
+      style={{
+        fontFamily: `"IBM Plex Sans", "IBM Plex Sans JP"`,
+        backgroundColor: "#999",
+        margin: 0,
+        padding: 0,
+      }}
+    >
+      <App />
+    </div>
   </React.StrictMode>,
 );
